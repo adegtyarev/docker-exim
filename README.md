@@ -26,17 +26,18 @@ A Docker image for Exim, the Message Transfer Agent
 
 ## Quick start
 
-Create a new container which will keep mail queue and log volumes:
+Create a new container named `maildata` which will keep mail queue and log
+volumes:
 
     $ docker create --name maildata adegtyarev/exim
 
 
-Run Exim in a new container:
+Run Exim in a container with name `exim`:
 
-    $ docker run --name exim --volumes-from maildata -d exim
+    $ docker run --name exim --volumes-from maildata -d adegtyarev/exim
 
 
-The sever now should be up and ready.
+The server now should be up and ready.
 
 
 ## Configuration
